@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ben's 3D Printing Shop</title>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family: Arial, sans-serif; }
+  section { padding:80px 20px; }
+  h1,h2,h3 { margin:0 0 20px 0; }
+
+  a.button {
+    display:inline-block; padding:12px 25px; border-radius:12px; text-decoration:none; color:white; font-weight:bold; transition:0.3s;
+  }
+  a.button-red { background-color:#FF3333; }
+  a.button-red:hover { background-color:#CC0000; transform: scale(1.05); }
+  a.button-green { background-color:#33CC33; }
+  a.button-green:hover { background-color:#009900; transform: scale(1.05); }
+  a.button-blue { background-color:#3333CC; }
+  a.button-blue:hover { background-color:#000099; transform: scale(1.05); }
+  a.button-purple { background-color:#AA33CC; }
+  a.button-purple:hover { background-color:#8800AA; transform: scale(1.05); }
+
+  /* Products */
+  .products { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; }
+  .card { background:white; border-radius:15px; padding:20px; box-shadow:0 5px 20px rgba(0,0,0,0.15); text-align:center; transition: transform 0.3s, box-shadow 0.3s; width:220px; }
+  .card:hover { transform:scale(1.05); box-shadow:0 10px 25px rgba(0,0,0,0.3); }
+  .card img { width:150px; border-radius:12px; }
+
+  /* Navigation */
+  nav {
+    position: sticky;
+    top:0;
+    background: rgba(51,51,51,0.95);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  nav a:hover {
+    background: #FFD700;
+    color: #222;
+    transform: scale(1.1);
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#custom-orders">Custom Orders</a>
+  <a href="#about">About</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- ===== Home / Hero ===== -->
+<section id="home" style="text-align:center; background: linear-gradient(120deg,#FFDD99,#FFAA55); color:#222;">
+  <h1 style="font-size:45px; color:#3333CC;">Ben's 3D Printing Shop</h1>
+  <p style="font-size:20px;">Custom 3D prints & fidgets – designed just for you!</p>
+  <img src="flexi_cat.png" alt="Flexi Cat Fidget" style="width:50%; max-width:350px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.3); margin-top:30px;">
+  <div style="margin-top:30px;">
+    <a href="#products" class="button button-red">See Products</a>
+    <a href="#custom-orders" class="button button-green">Custom Orders</a>
+  </div>
+</section>
+
+<!-- ===== Products ===== -->
+<section id="products" style="background-color:#E0F7FF;">
+  <h2 style="text-align:center; color:#3333CC;">Our Products</h2>
+  <div class="products">
+    <div class="card">
+      <img src="flexi_cat.png" alt="Flexi Cat Fidget">
+      <h3 style="color:#FF3333;">Flexi Cat</h3>
+      <p style="font-weight:bold;">₪40</p>
+      <p style="font-size:14px; color:#555;">Durable PLA, fun cat shape, flexible.</p>
+      <a href="#custom-orders" class="button button-red">Order</a>
+    </div>
+
+    <div class="card">
+      <img src="flexi_dog.png" alt="Flexi Dog Fidget">
+      <h3 style="color:#33CC33;">Flexi Dog</h3>
+      <p style="font-weight:bold;">₪45</p>
+      <p style="font-size:14px; color:#555;">Cute dog design, flexible and fun.</p>
+      <a href="#custom-orders" class="button button-green">Order</a>
+    </div>
+
+    <div class="card">
+      <img src="flexi_din.png" alt="Flexi Dinosaur Fidget">
+      <h3 style="color:#3333CC;">Flexi Dino</h3>
+      <p style="font-weight:bold;">₪50</p>
+      <p style="font-size:14px; color:#555;">Dino shaped fidget, durable PLA.</p>
+      <a href="#custom-orders" class="button button-blue">Order</a>
+    </div>
+
+    <div class="card">
+      <img src="cus.png" alt="Custom Print">
+      <h3 style="color:#AA33CC;">Custom Print</h3>
+      <p style="font-weight:bold;">₪70+</p>
+      <p style="font-size:14px; color:#555;">Design your own 3D print!</p>
+      <a href="#custom-orders" class="button button-purple">Order</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Custom Orders ===== -->
+<section id="custom-orders" style="background: linear-gradient(120deg,#FFCCEE,#FF99DD); text-align:center;">
+  <h2 style="color:#CC33CC;">Custom Orders</h2>
+  <p>Fill out the form below to request your custom 3D print:</p>
+
+  <!-- Google Form Embed -->
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScnJgJ6ljAn42hjbWfUBlfUuNca4qvcx1zbLG1Q37HDwmmvaw/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0" style="max-width:600px; border-radius:12px; box-shadow:0 5px 20px rgba(0,0,0,0.2);">Loading…</iframe>
+</section>
+
+<!-- ===== About ===== -->
+<section id="about" style="background-color:#FFE0B2; text-align:center;">
+  <h2 style="color:#FF6F00;">About Ben's 3D Shop</h2>
+  <p style="max-width:700px; margin:auto;">We create high-quality custom 3D prints and fun fidgets. Each item is printed with care and designed for fun, stress relief, and personalization. Your imagination is the limit!</p>
+</section>
+
+<!-- ===== FAQ / Shipping ===== -->
+<section id="faq" style="background: linear-gradient(120deg,#CCFFCC,#99FF99); text-align:center;">
+  <h2 style="color:#009900;">FAQ & Shipping Info</h2>
+  <p style="max-width:700px; margin:auto;">Shipping usually takes 5–10 business days. Custom orders may take longer depending on complexity. If you have any questions about your order, please contact us below.</p>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact" style="background: linear-gradient(120deg,#CCFFFF,#99DDFF); text-align:center;">
+  <h2 style="color:#009999;">Contact Me</h2>
+  <p>Email: <a href="mailto:ben.mitzna@gmail.com" style="color:#009999;">ben.mitzna@gmail.com</a></p>
+  <p>Instagram / Discord / Social links here</p>
+</section>
+
+</body>
+</html>
+
