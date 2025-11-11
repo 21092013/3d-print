@@ -3,211 +3,179 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>חנות ההדפסות של בן</title>
+  <title>חנות ההדפסות</title>
   <style>
     body {
       font-family: 'Assistant', sans-serif;
       margin: 0;
-      background: linear-gradient(to bottom, #ffe0b2, #fff3e0);
+      background: linear-gradient(to bottom, #ffefba, #ffffff);
       color: #222;
     }
 
-    /* ===== סרגל ניווט ===== */
     nav {
       background-color: #333;
       color: white;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      padding: 10px 20px;
-      position: fixed;
+      padding: 10px;
+      position: sticky;
       top: 0;
-      width: 100%;
-      z-index: 1000;
+      z-index: 10;
     }
 
-    .logo {
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      margin: 0 10px;
-    }
-
-    nav ul li a {
+    nav a {
       color: white;
       text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
-    nav ul li a:hover {
-      color: #ffa726;
+    nav a:hover {
+      color: #ffd700;
     }
 
-    /* ===== תפריט מובייל ===== */
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #ffcc80;
     }
 
-    .menu-toggle div {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      margin: 4px 0;
+    header h1 {
+      font-size: 48px;
+      color: #003366;
     }
 
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 70%;
-        max-width: 250px;
-        border-radius: 0 0 10px 10px;
-        overflow: hidden;
-      }
-
-      nav ul.active {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: flex;
-      }
+    header p {
+      font-size: 20px;
     }
 
-    /* ===== תוכן הדף ===== */
-    main {
-      padding: 100px 20px;
+    section {
+      padding: 50px 20px;
       text-align: center;
     }
 
-    h1 {
-      color: #1565c0;
-      font-size: 2.2em;
-      margin-bottom: 10px;
+    .products {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
-    .product {
+    .card {
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-      padding: 15px;
-      margin: 15px auto;
-      max-width: 400px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 250px;
+      padding: 20px;
+      transition: 0.3s;
     }
 
-    .product img {
-      width: 100%;
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 200px;
+      height: auto;
       border-radius: 10px;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #333;
-      color: white;
-      margin-top: 50px;
+    iframe {
+      border: none;
+      border-radius: 10px;
+      width: 80%;
+      height: 900px;
     }
 
-    footer a {
-      color: #ffa726;
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    a.link {
+      color: #ffd700;
       text-decoration: none;
+    }
+
+    a.link:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
-
 <body>
-
   <nav>
-    <div class="logo">חנות ההדפסות</div>
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <ul id="menu">
-      <li><a href="#home">בית</a></li>
-      <li><a href="#products">מוצרים</a></li>
-      <li><a href="#custom">הזמנות מותאמות</a></li>
-      <li><a href="#about">על החנות</a></li>
-      <li><a href="#faq">שאלות נפוצות</a></li>
-      <li><a href="#reviews">ביקורות</a></li>
-      <li><a href="#creators">יוצרי הדגמים</a></li>
-      <li><a href="#shipping">משלוחים</a></li>
-      <li><a href="#contact">צור קשר</a></li>
-    </ul>
+    <a href="#home">בית</a>
+    <a href="#products">מוצרים</a>
+    <a href="#custom">הזמנות מותאמות</a>
+    <a href="#reviews">ביקורות</a>
+    <a href="#creators">יוצרי הדגמים</a>
+    <a href="#shipping">משלוחים</a>
+    <a href="#contact">צור קשר</a>
   </nav>
 
-  <main id="home">
-    <h1>ברוך הבא לחנות ההדפסות של בן!</h1>
-    <p>מוצרים מותאמים אישית ופידג'טים – בעיצוב אישי!</p>
+  <header id="home">
+    <h1>חנות ההדפסות של בן</h1>
+    <p>מוצרים מותאמים אישית ופידג'טים בעיצוב אישי!</p>
+  </header>
 
-    <section id="products">
-      <div class="product">
-        <img src="https://m.media-amazon.com/images/I/71ZP0s9uZrL._AC_SL1500_.jpg" alt="חתול מפרקי">
-        <h3>חתול מפרקי 3D</h3>
-        <p>מודל גמיש ומגניב להדפסה – מושלם כצעצוע או מתנה!</p>
+  <section id="products">
+    <h2>מוצרים</h2>
+    <div class="products">
+      <div class="card">
+        <img src="flexi_cat.png" alt="חתול פידג'ט">
+        <p>חתול פלקסי</p>
       </div>
-      <div class="product">
-        <img src="https://m.media-amazon.com/images/I/71oB8Yf9AmL._AC_SL1500_.jpg" alt="דרקון מפרקי">
-        <h3>דרקון מפרקי</h3>
-        <p>דרקון מפורט עם מפרקים גמישים, נראה מדהים לאחר הדפסה!</p>
+      <div class="card">
+        <img src="flexi_dog.png" alt="כלב פידג'ט">
+        <p>כלב פלקסי</p>
       </div>
-    </section>
+      <div class="card">
+        <img src="flexi_din.png" alt="דינוזאור פידג'ט">
+        <p>דינוזאור פלקסי</p>
+      </div>
+      <div class="card">
+        <img src="cus.png" alt="הזמנה מותאמת">
+        <p>הזמנה מותאמת אישית</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="reviews">
-      <h2>ביקורות</h2>
-      <p>⭐⭐⭐⭐⭐ "הדפסה באיכות מדהימה! הילד שלי לא מפסיק לשחק עם זה!"</p>
-      <p>⭐⭐⭐⭐⭐ "משלוח מהיר ושירות מעולה!"</p>
-    </section>
+  <section id="custom">
+    <h2>הזמנה מותאמת</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScnJgJ6ljAn42hjbWfUBlfUuNca4qvcx1zbLG1Q37HDwmmvaw/viewform?embedded=true" width="640" height="977" frameborder="0" marginheight="0" marginwidth="0">טוען…</iframe>
+  </section>
 
-    <section id="creators">
-      <h2>יוצרי הדגמים</h2>
-      <p>כל המודלים נוצרו על ידי יוצרי קהילה מוכשרים מאתרי הדפסה ידועים:</p>
-      <ul>
-        <li><a href="https://www.printables.com" target="_blank">Printables</a></li>
-        <li><a href="https://www.thingiverse.com" target="_blank">Thingiverse</a></li>
-      </ul>
-    </section>
+  <section id="reviews">
+    <h2>ביקורות</h2>
+    <p>⭐⭐⭐⭐⭐ “האיכות מדהימה!”</p>
+    <p>⭐⭐⭐⭐⭐ “בן הדפיס בדיוק מה שרציתי!”</p>
+  </section>
 
-    <section id="contact">
-      <h2>צור קשר</h2>
-      <p>אם יש לכם שאלה או הזמנה מיוחדת – כתבו לנו כאן!</p>
-      <a href="mailto:contact@example.com">שלח אימייל</a>
-    </section>
-  </main>
+  <section id="creators">
+    <h2>יוצרי הדגמים</h2>
+    <p>
+      Flexi Cat - <a class="link" href="https://www.printables.com/model/4994-flexi-cat" target="_blank">קישור למקור</a><br>
+      Flexi Dog - <a class="link" href="https://www.printables.com/model/34810-flexi-dog" target="_blank">קישור למקור</a><br>
+      Flexi Dino - <a class="link" href="https://www.printables.com/model/1522-flexi-dinosaur" target="_blank">קישור למקור</a>
+    </p>
+  </section>
+
+  <section id="shipping">
+    <h2>משלוחים</h2>
+    <p>אנחנו שולחים לכל רחבי הארץ תוך 3–7 ימי עסקים.</p>
+  </section>
+
+  <section id="contact">
+    <h2>צור קשר</h2>
+    <p>כתבו לנו ל: <a class="link" href="mailto:ben.mitzna@gmail.com">ben.mitzna@gmail.com</a></p>
+  </section>
 
   <footer>
-    <p>© 2025 בן הדפסות תלת מימד</p>
-    <p>קישורים ליוצרי המודלים: 
-      <a href="https://www.printables.com" target="_blank">Printables</a> | 
-      <a href="https://www.thingiverse.com" target="_blank">Thingiverse</a>
-    </p>
+    <p>© 2025 חנות ההדפסות של בן</p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu");
-      menu.classList.toggle("active");
-    }
-  </script>
 </body>
 </html>
-
-
-
