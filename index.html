@@ -1,154 +1,92 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="he">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>חנות ההדפסות התלת-ממדיות של בן</title>
+<title>Flexi 3D Store</title>
+
 <style>
-  html { scroll-behavior: smooth; }
-  body { margin:0; font-family: Arial, sans-serif; }
-  section { padding:80px 20px; }
-  h1,h2,h3 { margin:0 0 20px 0; }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f7f7f7;
+    direction: rtl;
+    text-align: center;
+  }
 
-  a.button {
-    display:inline-block; padding:12px 25px; border-radius:12px;
-    text-decoration:none; color:white; font-weight:bold; transition:0.3s;
+  header {
+    background: linear-gradient(120deg,#FF99CC,#FF66AA);
+    padding: 20px;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
   }
-  a.button-red { background-color:#FF3333; }
-  a.button-red:hover { background-color:#CC0000; transform: scale(1.05); }
-  a.button-green { background-color:#33CC33; }
-  a.button-green:hover { background-color:#009900; transform: scale(1.05); }
-  a.button-blue { background-color:#3333CC; }
-  a.button-blue:hover { background-color:#000099; transform: scale(1.05); }
-  a.button-purple { background-color:#AA33CC; }
-  a.button-purple:hover { background-color:#8800AA; transform: scale(1.05); }
 
-  .products { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; }
-  .card {
-    background:white; border-radius:15px; padding:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.15);
-    text-align:center; width:220px;
-    transition: transform 0.3s, box-shadow 0.3s;
+  section {
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
-  .card:hover { transform:scale(1.05); box-shadow:0 10px 25px rgba(0,0,0,0.3); }
-  .card img { width:150px; border-radius:12px; }
 
-  nav {
-    position: sticky; top:0; background: rgba(51,51,51,0.95);
-    z-index: 999; display: flex; justify-content: center;
-    gap: 25px; padding: 12px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    backdrop-filter: blur(5px); transition: all 0.3s ease;
+  h2 {
+    color: #C2185B;
   }
-  nav a {
-    color: white; text-decoration:none; font-weight:600;
-    font-size:16px; padding:6px 12px; border-radius:8px;
-    transition:0.3s;
+
+  iframe {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
   }
-  nav a:hover { background:#FFD700; color:#222; transform:scale(1.1); }
 </style>
 </head>
+
 <body>
 
-<!-- ===== Navigation ===== -->
-<nav>
-  <a href="#home">בית</a>
-  <a href="#products">מוצרים</a>
-  <a href="#custom-orders">הזמנות מותאמות</a>
-  <a href="#reviews">ביקורות</a>
-  <a href="#about">על החנות</a>
-  <a href="#faq">שאלות נפוצות</a>
-  <a href="#contact">צור קשר</a>
-</nav>
+<header>Flexi 3D — הזמנות אישיות, צעצועים, ופרטים מודפסים</header>
 
-<!-- ===== Home ===== -->
-<section id="home" style="text-align:center; background: linear-gradient(120deg,#FFDD99,#FFAA55);">
-  <h1 style="font-size:45px; color:#3333CC;">חנות ההדפסות התלת-ממדיות של בן</h1>
-  <p style="font-size:20px;">מוצרים מותאמים אישית ופידג'טים – בעיצוב אישי!</p>
-  <img src="flexi_cat.png" style="width:50%; max-width:350px; border-radius:15px;">
-  <div style="margin-top:30px;">
-    <a href="#products" class="button button-red">לצפייה במוצרים</a>
-    <a href="#custom-orders" class="button button-green">הזמנות מותאמות</a>
-  </div>
+<!-- ===== Products Section ===== -->
+<section id="products">
+  <h2>המוצרים הפופולריים</h2>
+  <p>חתול פלקסי, כלב פלקסי, דינוזאור פלקסי, ועוד...</p>
 </section>
 
-<!-- ===== Products ===== -->
-<section id="products" style="background-color:#E0F7FF;">
-  <h2 style="text-align:center; color:#3333CC;">המוצרים שלנו</h2>
+<!-- ===== Reviews Section ===== -->
+<section id="reviews">
+  <h2>ביקורות לקוחות</h2>
 
-  <div class="products">
-    <div class="card">
-      <img src="flexi_cat.png">
-      <h3 style="color:#FF3333;">פלקסי קאט</h3>
-      <p style="font-weight:bold;">₪40</p>
-      <p style="font-size:14px; color:#555;">פלקסי חתול איכותי וגמיש</p>
-      <a class="button button-red" href="#custom-orders">הזמן</a>
-    </div>
-
-    <div class="card">
-      <img src="flexi_dog.png">
-      <h3 style="color:#33CC33;">פלקסי דוג</h3>
-      <p style="font-weight:bold;">₪45</p>
-      <p style="font-size:14px; color:#555;">פלקסי כלב חמוד</p>
-      <a class="button button-green" href="#custom-orders">הזמן</a>
-    </div>
-
-    <div class="card">
-      <img src="flexi_din.png">
-      <h3 style="color:#3333CC;">פלקסי דינו</h3>
-      <p style="font-weight:bold;">₪50</p>
-      <p style="font-size:14px; color:#555;">דינוזאור גמיש ומהנה</p>
-      <a class="button button-blue" href="#custom-orders">הזמן</a>
-    </div>
-
-    <div class="card">
-      <img src="cus.png">
-      <h3 style="color:#AA33CC;">הדפסה מותאמת אישית</h3>
-      <p style="font-weight:bold;">₪70+</p>
-      <p style="font-size:14px; color:#555;">תעצבו מה שבא לכם!</p>
-      <a class="button button-purple" href="#custom-orders">הזמן</a>
-    </div>
-  </div>
+  <iframe 
+    src="https://docs.google.com/forms/d/e/1FAIpQLSfLrTloCwQgvlMy29zJF2QtRSkHPPwsU29lSPecLPEBwxpJJw/viewform?embedded=true"
+    height="1100">
+  </iframe>
 </section>
 
-<!-- ===== Custom Orders Form ===== -->
-<section id="custom-orders" style="background: linear-gradient(120deg,#FFCCEE,#FF99DD); text-align:center;">
-  <h2 style="color:#CC33CC;">הזמנות מותאמות אישית</h2>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScd5N_Hl8q_lNxLK5yPaJPFIM66J37nWG9X-oUX_WMh1rl5DQ/viewform?embedded=true"
-          width="100%" height="900" frameborder="0" style="max-width:600px; border-radius:12px;"></iframe>
+<!-- ===== Custom Orders Section (UPDATED) ===== -->
+<section id="custom-orders">
+  <h2>הזמנות מותאמות אישית</h2>
+
+  <iframe 
+    src="https://docs.google.com/forms/d/e/1FAIpQLScnJgJ6ljAn42hjbWfUBlfUuNca4qvcx1zbLG1Q37HDwmmvaw/viewform?embedded=true"
+    height="1100">
+  </iframe>
 </section>
 
-<!-- ===== Reviews Form (NEW SECTION) ===== -->
-<section id="reviews" style="background: linear-gradient(120deg,#FFF3CC,#FFE080); text-align:center;">
-  <h2 style="color:#FF9900;">השאירו ביקורת</h2>
-  <p>נשמח לשמוע מה חשבתם!</p>
-
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScd5N_Hl8q_lNxLK5yPaJPFIM66J37nWG9X-oUX_WMh1rl5DQ/viewform?embedded=true"
-          width="100%" height="900" frameborder="0"
-          style="max-width:600px; border-radius:12px;"></iframe>
-</section>
-
-<!-- ===== About ===== -->
-<section id="about" style="background-color:#FFE0B2; text-align:center;">
-  <h2>על החנות</h2>
-  <p>אנו יוצרים הדפסות תלת־ממד איכותיות, פלקסי צעצועים ועוד!</p>
-</section>
-
-<!-- ===== FAQ ===== -->
-<section id="faq" style="background: linear-gradient(120deg,#CCFFCC,#99FF99); text-align:center;">
-  <h2>שאלות נפוצות</h2>
-  <p>משלוחים: 5–10 ימים. הזמנות מותאמות לוקחות קצת יותר.</p>
-</section>
-
-<!-- ===== Contact ===== -->
-<section id="contact" style="background: linear-gradient(120deg,#CCFFFF,#99DDFF); text-align:center;">
+<!-- ===== Contact Section ===== -->
+<section id="contact">
   <h2>צור קשר</h2>
-  <p>אימייל: <a href="mailto:ben.mitzna@gmail.com">ben.mitzna@gmail.com</a></p>
+  <p>להזמנות ושאלות:  
+  <br>✉ WhatsApp  
+  <br>📦 משלוחים בכל הארץ  
+  </p>
 </section>
 
 </body>
 </html>
   
+
 
 
 
