@@ -11,7 +11,8 @@
   h1,h2,h3 { margin:0 0 20px 0; }
 
   a.button {
-    display:inline-block; padding:12px 25px; border-radius:12px; text-decoration:none; color:white; font-weight:bold; transition:0.3s;
+    display:inline-block; padding:12px 25px; border-radius:12px;
+    text-decoration:none; color:white; font-weight:bold; transition:0.3s;
   }
   a.button-red { background-color:#FF3333; }
   a.button-red:hover { background-color:#CC0000; transform: scale(1.05); }
@@ -23,9 +24,28 @@
   a.button-purple:hover { background-color:#8800AA; transform: scale(1.05); }
 
   .products { display:flex; flex-wrap:wrap; gap:25px; justify-content:center; }
-  .card { background:white; border-radius:15px; padding:20px; box-shadow:0 5px 20px rgba(0,0,0,0.15); text-align:center; transition: transform 0.3s, box-shadow 0.3s; width:220px; }
+  .card {
+    background:white; border-radius:15px; padding:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+    text-align:center; width:220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
   .card:hover { transform:scale(1.05); box-shadow:0 10px 25px rgba(0,0,0,0.3); }
   .card img { width:150px; border-radius:12px; }
+
+  nav {
+    position: sticky; top:0; background: rgba(51,51,51,0.95);
+    z-index: 999; display: flex; justify-content: center;
+    gap: 25px; padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px); transition: all 0.3s ease;
+  }
+  nav a {
+    color: white; text-decoration:none; font-weight:600;
+    font-size:16px; padding:6px 12px; border-radius:8px;
+    transition:0.3s;
+  }
+  nav a:hover { background:#FFD700; color:#222; transform:scale(1.1); }
 </style>
 </head>
 <body>
@@ -35,17 +55,17 @@
   <a href="#home">בית</a>
   <a href="#products">מוצרים</a>
   <a href="#custom-orders">הזמנות מותאמות</a>
+  <a href="#reviews">ביקורות</a>
   <a href="#about">על החנות</a>
   <a href="#faq">שאלות נפוצות</a>
-  <a href="#reviews">ביקורות</a>
   <a href="#contact">צור קשר</a>
 </nav>
 
-<!-- ===== Home / Hero ===== -->
-<section id="home" style="text-align:center; background: linear-gradient(120deg,#FFDD99,#FFAA55); color:#222;">
+<!-- ===== Home ===== -->
+<section id="home" style="text-align:center; background: linear-gradient(120deg,#FFDD99,#FFAA55);">
   <h1 style="font-size:45px; color:#3333CC;">חנות ההדפסות התלת-ממדיות של בן</h1>
   <p style="font-size:20px;">מוצרים מותאמים אישית ופידג'טים – בעיצוב אישי!</p>
-  <img src="flexi_cat.png" alt="Flexi Cat Fidget" style="width:50%; max-width:350px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.3); margin-top:30px;">
+  <img src="flexi_cat.png" style="width:50%; max-width:350px; border-radius:15px;">
   <div style="margin-top:30px;">
     <a href="#products" class="button button-red">לצפייה במוצרים</a>
     <a href="#custom-orders" class="button button-green">הזמנות מותאמות</a>
@@ -55,81 +75,81 @@
 <!-- ===== Products ===== -->
 <section id="products" style="background-color:#E0F7FF;">
   <h2 style="text-align:center; color:#3333CC;">המוצרים שלנו</h2>
-  <div class="products">
 
+  <div class="products">
     <div class="card">
-      <img src="flexi_cat.png" alt="Flexi Cat Fidget">
+      <img src="flexi_cat.png">
       <h3 style="color:#FF3333;">פלקסי קאט</h3>
       <p style="font-weight:bold;">₪40</p>
-      <p style="font-size:14px; color:#555;">PLA עמיד, צורת חתול מהנה, גמיש.</p>
-      <a href="#custom-orders" class="button button-red">הזמן עכשיו</a>
+      <p style="font-size:14px; color:#555;">פלקסי חתול איכותי וגמיש</p>
+      <a class="button button-red" href="#custom-orders">הזמן</a>
     </div>
 
     <div class="card">
-      <img src="flexi_dog.png" alt="Flexi Dog Fidget">
+      <img src="flexi_dog.png">
       <h3 style="color:#33CC33;">פלקסי דוג</h3>
       <p style="font-weight:bold;">₪45</p>
-      <p style="font-size:14px; color:#555;">עיצוב כלב חמוד, גמיש ומהנה.</p>
-      <a href="#custom-orders" class="button button-green">הזמן עכשיו</a>
+      <p style="font-size:14px; color:#555;">פלקסי כלב חמוד</p>
+      <a class="button button-green" href="#custom-orders">הזמן</a>
     </div>
 
     <div class="card">
-      <img src="flexi_din.png" alt="Flexi Dino Fidget">
+      <img src="flexi_din.png">
       <h3 style="color:#3333CC;">פלקסי דינו</h3>
       <p style="font-weight:bold;">₪50</p>
-      <p style="font-size:14px; color:#555;">פידג'ט בצורת דינו, PLA עמיד.</p>
-      <a href="#custom-orders" class="button button-blue">הזמן עכשיו</a>
+      <p style="font-size:14px; color:#555;">דינוזאור גמיש ומהנה</p>
+      <a class="button button-blue" href="#custom-orders">הזמן</a>
     </div>
 
     <div class="card">
-      <img src="cus.png" alt="Custom Print">
+      <img src="cus.png">
       <h3 style="color:#AA33CC;">הדפסה מותאמת אישית</h3>
       <p style="font-weight:bold;">₪70+</p>
-      <p style="font-size:14px; color:#555;">עצב את ההדפסה התלת-ממדית שלך!</p>
-      <a href="#custom-orders" class="button button-purple">הזמן עכשיו</a>
+      <p style="font-size:14px; color:#555;">תעצבו מה שבא לכם!</p>
+      <a class="button button-purple" href="#custom-orders">הזמן</a>
     </div>
-
   </div>
 </section>
 
-<!-- ===== Custom Orders ===== -->
+<!-- ===== Custom Orders Form ===== -->
 <section id="custom-orders" style="background: linear-gradient(120deg,#FFCCEE,#FF99DD); text-align:center;">
   <h2 style="color:#CC33CC;">הזמנות מותאמות אישית</h2>
-  <p>מלאו את הטופס למטה להזמנת הדפסה מותאמת:</p>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScd5N_Hl8q_lNxLK5yPaJPFIM66J37nWG9X-oUX_WMh1rl5DQ/viewform?embedded=true"
+          width="100%" height="900" frameborder="0" style="max-width:600px; border-radius:12px;"></iframe>
+</section>
 
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScd5N_Hl8q_lNxLK5yPaJPFIM66J37nWG9X-oUX_WMh1rl5DQ/viewform?embedded=true" width="640" height="748" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<!-- ===== Reviews Form (NEW SECTION) ===== -->
+<section id="reviews" style="background: linear-gradient(120deg,#FFF3CC,#FFE080); text-align:center;">
+  <h2 style="color:#FF9900;">השאירו ביקורת</h2>
+  <p>נשמח לשמוע מה חשבתם!</p>
+
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScd5N_Hl8q_lNxLK5yPaJPFIM66J37nWG9X-oUX_WMh1rl5DQ/viewform?embedded=true"
+          width="100%" height="900" frameborder="0"
+          style="max-width:600px; border-radius:12px;"></iframe>
 </section>
 
 <!-- ===== About ===== -->
 <section id="about" style="background-color:#FFE0B2; text-align:center;">
-  <h2 style="color:#FF6F00;">על החנות</h2>
-  <p style="max-width:700px; margin:auto;">אנו יוצרים הדפסות תלת-ממד איכותיות ופידג'טים מהנים. כל פריט מודפס בקפידה ומיועד לכיף, להפגת מתחים ולמותאם אישית. הדמיון שלכם הוא הגבול!</p>
+  <h2>על החנות</h2>
+  <p>אנו יוצרים הדפסות תלת־ממד איכותיות, פלקסי צעצועים ועוד!</p>
 </section>
 
 <!-- ===== FAQ ===== -->
 <section id="faq" style="background: linear-gradient(120deg,#CCFFCC,#99FF99); text-align:center;">
-  <h2 style="color:#009900;">שאלות נפוצות</h2>
-  <p style="max-width:700px; margin:auto;">המשלוחים נמשכים בדרך כלל 5–10 ימי עסקים. הזמנות מותאמות עשויות לקחת יותר זמן בהתאם למורכבות.</p>
-</section>
-
-<!-- ===== Reviews (NEW SECTION) ===== -->
-<section id="reviews" style="background: linear-gradient(120deg,#D9C2FF,#B38CFF); text-align:center;">
-  <h2 style="color:#5A00CC;">ביקורות</h2>
-  <p>רוצים להשאיר ביקורת על מוצר? מוזמנים למלא את הטופס:</p>
-
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScd5N_Hl8q_lNxLK5yPaJPFIM66J37nWG9X-oUX_WMh1rl5DQ/viewform?embedded=true" width="640" height="745" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  <h2>שאלות נפוצות</h2>
+  <p>משלוחים: 5–10 ימים. הזמנות מותאמות לוקחות קצת יותר.</p>
 </section>
 
 <!-- ===== Contact ===== -->
 <section id="contact" style="background: linear-gradient(120deg,#CCFFFF,#99DDFF); text-align:center;">
-  <h2 style="color:#009999;">צור קשר</h2>
-  <p>אימייל: <a href="mailto:ben.mitzna@gmail.com" style="color:#009999;">ben.mitzna@gmail.com</a></p>
-  <p>Instagram / Discord / קישורים נוספים</p>
+  <h2>צור קשר</h2>
+  <p>אימייל: <a href="mailto:ben.mitzna@gmail.com">ben.mitzna@gmail.com</a></p>
 </section>
 
 </body>
 </html>
   
+
 
 
 
