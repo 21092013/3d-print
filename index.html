@@ -26,38 +26,6 @@
   .card { background:white; border-radius:15px; padding:20px; box-shadow:0 5px 20px rgba(0,0,0,0.15); text-align:center; transition: transform 0.3s, box-shadow 0.3s; width:220px; }
   .card:hover { transform:scale(1.05); box-shadow:0 10px 25px rgba(0,0,0,0.3); }
   .card img { width:150px; border-radius:12px; }
-
-  nav {
-    position: sticky;
-    top:0;
-    background: rgba(51,51,51,0.95);
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 12px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 6px 12px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  nav a:hover {
-    background: #FFD700;
-    color: #222;
-    transform: scale(1.1);
-  }
-
-  form input, form select, form textarea { width:100%; padding:10px; margin:5px 0 15px 0; border-radius:8px; border:1px solid #ccc; }
-  form button { cursor:pointer; }
-
 </style>
 </head>
 <body>
@@ -69,8 +37,7 @@
   <a href="#custom-orders">הזמנות מותאמות</a>
   <a href="#about">על החנות</a>
   <a href="#faq">שאלות נפוצות</a>
-  
-
+  <a href="#reviews">ביקורות</a>
   <a href="#contact">צור קשר</a>
 </nav>
 
@@ -89,6 +56,7 @@
 <section id="products" style="background-color:#E0F7FF;">
   <h2 style="text-align:center; color:#3333CC;">המוצרים שלנו</h2>
   <div class="products">
+
     <div class="card">
       <img src="flexi_cat.png" alt="Flexi Cat Fidget">
       <h3 style="color:#FF3333;">פלקסי קאט</h3>
@@ -96,6 +64,7 @@
       <p style="font-size:14px; color:#555;">PLA עמיד, צורת חתול מהנה, גמיש.</p>
       <a href="#custom-orders" class="button button-red">הזמן עכשיו</a>
     </div>
+
     <div class="card">
       <img src="flexi_dog.png" alt="Flexi Dog Fidget">
       <h3 style="color:#33CC33;">פלקסי דוג</h3>
@@ -103,6 +72,7 @@
       <p style="font-size:14px; color:#555;">עיצוב כלב חמוד, גמיש ומהנה.</p>
       <a href="#custom-orders" class="button button-green">הזמן עכשיו</a>
     </div>
+
     <div class="card">
       <img src="flexi_din.png" alt="Flexi Dino Fidget">
       <h3 style="color:#3333CC;">פלקסי דינו</h3>
@@ -110,6 +80,7 @@
       <p style="font-size:14px; color:#555;">פידג'ט בצורת דינו, PLA עמיד.</p>
       <a href="#custom-orders" class="button button-blue">הזמן עכשיו</a>
     </div>
+
     <div class="card">
       <img src="cus.png" alt="Custom Print">
       <h3 style="color:#AA33CC;">הדפסה מותאמת אישית</h3>
@@ -117,6 +88,7 @@
       <p style="font-size:14px; color:#555;">עצב את ההדפסה התלת-ממדית שלך!</p>
       <a href="#custom-orders" class="button button-purple">הזמן עכשיו</a>
     </div>
+
   </div>
 </section>
 
@@ -124,28 +96,29 @@
 <section id="custom-orders" style="background: linear-gradient(120deg,#FFCCEE,#FF99DD); text-align:center;">
   <h2 style="color:#CC33CC;">הזמנות מותאמות אישית</h2>
   <p>מלאו את הטופס למטה להזמנת הדפסה מותאמת:</p>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScd5N_Hl8q_lNxLK5yPaJPFIM66J37nWG9X-oUX_WMh1rl5DQ/viewform?embedded=true" width="640" height="748" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-<!-- ===== Review ===== -->
+
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScd5N_Hl8q_lNxLK5yPaJPFIM66J37nWG9X-oUX_WMh1rl5DQ/viewform?embedded=true" width="640" height="748" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </section>
-<section id="custom-orders" style="background: linear-gradient(120deg,#FFCCEE,#FF99DD); text-align:center;">
-  <h2 style="color:#CC33CC;">הזמנות מותאמות אישית</h2>
-  <p>מלאו את הטופס למטה להזמנת הדפסה מותאמת:</p>
-  <iframe src="<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScd5N_Hl8q_lNxLK5yPaJPFIM66J37nWG9X-oUX_WMh1rl5DQ/viewform?embedded=true" width="640" height="748" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0" style="max-width:600px; border-radius:12px; box-shadow:0 5px 20px rgba(0,0,0,0.2);">טוען…</iframe>
-</section>
+
 <!-- ===== About ===== -->
 <section id="about" style="background-color:#FFE0B2; text-align:center;">
   <h2 style="color:#FF6F00;">על החנות</h2>
   <p style="max-width:700px; margin:auto;">אנו יוצרים הדפסות תלת-ממד איכותיות ופידג'טים מהנים. כל פריט מודפס בקפידה ומיועד לכיף, להפגת מתחים ולמותאם אישית. הדמיון שלכם הוא הגבול!</p>
 </section>
 
-<!-- ===== FAQ / Shipping Info ===== -->
+<!-- ===== FAQ ===== -->
 <section id="faq" style="background: linear-gradient(120deg,#CCFFCC,#99FF99); text-align:center;">
   <h2 style="color:#009900;">שאלות נפוצות</h2>
-  <p style="max-width:700px; margin:auto;">המשלוחים נמשכים בדרך כלל 5–10 ימי עסקים. הזמנות מותאמות עשויות לקחת יותר זמן בהתאם למורכבות. אם יש לכם שאלות לגבי ההזמנה, צרו קשר למטה.</p>
+  <p style="max-width:700px; margin:auto;">המשלוחים נמשכים בדרך כלל 5–10 ימי עסקים. הזמנות מותאמות עשויות לקחת יותר זמן בהתאם למורכבות.</p>
 </section>
 
+<!-- ===== Reviews (NEW SECTION) ===== -->
+<section id="reviews" style="background: linear-gradient(120deg,#D9C2FF,#B38CFF); text-align:center;">
+  <h2 style="color:#5A00CC;">ביקורות</h2>
+  <p>רוצים להשאיר ביקורת על מוצר? מוזמנים למלא את הטופס:</p>
 
-
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScd5N_Hl8q_lNxLK5yPaJPFIM66J37nWG9X-oUX_WMh1rl5DQ/viewform?embedded=true" width="640" height="745" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</section>
 
 <!-- ===== Contact ===== -->
 <section id="contact" style="background: linear-gradient(120deg,#CCFFFF,#99DDFF); text-align:center;">
@@ -157,6 +130,7 @@
 </body>
 </html>
   
+
 
 
 
